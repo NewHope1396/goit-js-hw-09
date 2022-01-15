@@ -31,3 +31,18 @@ img {
   align-items: center;
   justify-content: center;
 }
+
+.timer {
+  display: flex;
+}
+
+.field {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.value {
+  font-size: 48px;
+}
