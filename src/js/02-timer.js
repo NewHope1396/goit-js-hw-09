@@ -37,10 +37,13 @@ startBtn.addEventListener('click', onStartBtnClick);
 
 function onStartBtnClick() {
 intervalId = setInterval(() => {
-    const dateNow = new Date();
-    const timeDifference = dateToChoose.getTime() - dateNow.getTime();
-    const convertTime = convertMs(timeDifference);
-    updateTime(convertTime);
+  const dateNow = new Date();
+  const timeDifference = dateToChoose.getTime() - dateNow.getTime();
+  const convertTime = convertMs(timeDifference);
+  if (timeDifference < 1000) {
+    clearInterval(intervalId);  
+  }
+  updateTime(convertTime);
     
 }, 1000);
 
